@@ -1,11 +1,43 @@
+#navbarName {
+  font-size: 3rem;
+}
+
+nav {
+  font-size: 2rem;
+}
+
+.custom-navbar {
+  color: #33FF00 !important;
+  background-color: black !important;
+}
+
 main {
-  margin: 10px;
+  background-color: rgb(33, 37, 41);
 }
 
 section {
-  padding-top: 70px;
+  /* padding-top: 70px; */
+  padding: 1rem;
+  padding-top: 7rem;
 
   /* sections take up full view */
   height: 100vh;
   width: 100vw;
+}
+
+body,
+html {
+  font-size: 100%;
+  margin: 0;
+  color: #33FF00;
+}
+
+a {
+  text-decoration: none;
+  color: inherit !important;
+}
+
+a:hover {
+  background-color: rgb(33, 37, 41);
+  border-radius: 0.5rem;
 }
