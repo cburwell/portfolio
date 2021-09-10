@@ -7,3 +7,4 @@
 ## BUGS:
 
 - [ ] Fix home heading disappeared under navbar when opening console
+- [ ] Fix fake terminal window buttons
