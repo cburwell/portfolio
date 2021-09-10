@@ -13,14 +13,31 @@
   <title>Cameron Burwell</title>
 
   <script>
-    let activeLink = "homeLink";
+    let activeLink = "";
 
+    window.onload = () => {
+      // set initial active class on load
+      let splitUrl = location.href.split('#');     
+      if (splitUrl.length > 1) {
+        activeLink = splitUrl.pop().toLowerCase() + "Link";
+      }
+      else {
+        activeLink = "homeLink";
+      }
+      document.getElementById(activeLink).classList.toggle('active');
+    }
+
+    // toggle active nav link class
     function toggleActive(e) {
       let linkID = e.text.split('#').pop().toLowerCase() + "Link";
-      document.getElementById(activeLink).classList.toggle('active');
+
+      if (activeLink) {
+        document.getElementById(activeLink).classList.toggle('active');
+      }
+
       document.getElementById(linkID).classList.toggle('active');
       activeLink = linkID;
-    } 
+    }
   </script>
 </head>
 
@@ -36,7 +53,8 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto">
           <div class="collapse navbar-collapse" id="navbarNav">
-            <a id="homeLink" class="navbar-item nav-link active" aria-current="page" href="#home" onclick="toggleActive(this)">Home</a>
+            <a id="homeLink" class="navbar-item nav-link" aria-current="page" href="#home"
+              onclick="toggleActive(this)">Home</a>
             <a id="aboutLink" class="navbar-item nav-link" href="#about" onclick="toggleActive(this)">About</a>
             <a id="contactLink" class="navbar-item nav-link" href="#contact" onclick="toggleActive(this)">Contact</a>
           </div>
@@ -47,12 +65,36 @@
 
   <!-- main content -->
   <main>
+    <!-- home -->
     <section id="home">
-      <p>Welcome to Cameron's home section!</p>
+      <article>
+        <h1>Meeting your personal and small business website needs</h1>
+      </article>
     </section>
-    <section id="about">
-      <p>Welcome to Cameron's about section!</p>
+
+    <!-- about -->
+    <section id="about" class="row">
+      <article class="col">
+        <h1>Cameron is...</h1>
+        <ul>
+          <li>(Frontend | Backend | Cyber Security | Test ) + Engineer</li>
+          <li>Website + (Designer && Developer)</li>
+          <li>Coffee lover</li>
+          <li>Musician</li>
+          <li>Motorcycle rider</li>
+        </ul>
+      </article>
+      <article class="col">
+        <h1>Cameron knows...</h1>
+        <ul>
+          <li>Javascript && HTML && CSS</li>
+          <li>Angular | React | ASP.NET | Spring</li>
+          <li>C# | Java</li>
+        </ul>
+      </article>
     </section>
+
+    <!-- contact -->
     <section id="contact">
       <p>Welcome to Cameron's contact section!</p>
     </section>
