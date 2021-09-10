@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!-- makes website responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link href="styles.css" rel="stylesheet" type="text/css">
+
+  <title>Cameron Burwell</title>
+
+  <script>
+    let activeLink = "homeLink";
+
+    function toggleActive(e) {
+      let linkID = e.text.split('#').pop().toLowerCase() + "Link";
+      document.getElementById(activeLink).classList.toggle('active');
+      document.getElementById(linkID).classList.toggle('active');
+      activeLink = linkID;
+    } 
+  </script>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Cameron Burwell</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <a id="homeLink" class="navbar-item nav-link active" aria-current="page" href="#home" onclick="toggleActive(this)">Home</a>
+            <a id="aboutLink" class="navbar-item nav-link" href="#about" onclick="toggleActive(this)">About</a>
+            <a id="contactLink" class="navbar-item nav-link" href="#contact" onclick="toggleActive(this)">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- main content -->
+  <main>
+    <section id="home">
+      <p>Welcome to Cameron's home section!</p>
+    </section>
+    <section id="about">
+      <p>Welcome to Cameron's about section!</p>
+    </section>
+    <section id="contact">
+      <p>Welcome to Cameron's contact section!</p>
+    </section>
+  </main>
+</body>
+
+</html>
