@@ -96,7 +96,7 @@ a:hover {
 .term-pic {
   max-height: 75vh;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .term-pic img {
@@ -113,6 +113,10 @@ a:hover {
   background-color: #fe6058;
   border-radius: 50%;
   display: inline-block;
+
+  float: left;
+  margin-right: 0.5rem;
+  margin-top: 0.25rem;
 }
 
 .yellow-dot {
@@ -121,6 +125,10 @@ a:hover {
   background-color: #ffbd2e;
   border-radius: 50%;
   display: inline-block;
+
+  float: left;
+  margin-right: 0.5rem;
+  margin-top: 0.25rem;
 }
 
 .green-dot {
@@ -129,13 +137,26 @@ a:hover {
   background-color: #2aca42;
   border-radius: 50%;
   display: inline-block;
+
+  float: left;
+  margin-right: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.center {
+  margin-left: -4rem;
 }
 
 .window-header {
   padding: 0.5rem;
-  /* paddingbottom: 0.5rem; */
   background-color: #303234;
   border-radius: 10px 10px 0px 0px;
+
+  /* position: relative; */
+  text-align: center;
+  
+  
+
 }
 
 .blink {
