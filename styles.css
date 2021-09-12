@@ -77,30 +77,79 @@ a:hover {
 
 .term-emu {
   background: black;
-  padding: 1rem;
+  padding: 0;
   margin: 1rem;
   border-radius: 10px;
+}
+
+.term-text {
+  padding-left: 0.5rem;
+  font-family: Ubuntu Mono; 
+}
+
+/* .term-pic {
+  width: 100%;
+  max-height: 75vh;
+  overflow: hidden;
+} */
+
+.term-pic {
+  max-height: 75vh;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.term-pic img {
+  max-height: initial;
 }
 
 #about {
   margin: 0;
 }
 
-i {
-  color: black;
-  font-size: 1.5rem;
-  background-color: #74736c;
-  padding: 0.5rem;
-  border-radius: 2rem;
+.red-dot {
+  height: 15px;
+  width: 15px;
+  background-color: #fe6058;
+  border-radius: 50%;
+  display: inline-block;
 }
 
-.mock-close-button {
-  color: #E04E1B !important;
-  background-color: black;
-  font-size: 2.5rem;
+.yellow-dot {
+  height: 15px;
+  width: 15px;
+  background-color: #ffbd2e;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.green-dot {
+  height: 15px;
+  width: 15px;
+  background-color: #2aca42;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .window-header {
-  display: inline-flex;
-  /* text-align: center; */
+  padding: 0.5rem;
+  /* paddingbottom: 0.5rem; */
+  background-color: #303234;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.blink {
+  opacity: 0%;
+  animation: blinking 0.6s linear infinite alternate;
+  -webkit-animation: blinking 0.6s linear infinite alternate;
+}
+
+@-webkit-keyframes blinking {
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes blinking {
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
