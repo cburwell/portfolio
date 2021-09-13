@@ -1,10 +1,13 @@
 ## TODO:
 
-- [ ] Write contact section
-- [ ] Write about section
-- [ ] Terminal-esque about section
+- [ ] Email contact form
+- [ ] Swap home and about sections
+- [ ] Tweak color scheme
+- [x] Write contact section
+- [x] Write about section
+- [x] Terminal-esque about section
 
 ## BUGS:
 
 - [ ] Fix home heading disappeared under navbar when opening console
-- [ ] Fix fake terminal window buttons
+- [x] Fix fake terminal window buttons
