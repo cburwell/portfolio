@@ -1,8 +1,9 @@
 ## TODO:
 
-- [ ] Email contact form
+- [x] Email contact form
 - [ ] Swap home and about sections
 - [ ] Tweak color scheme
+- [x] Validation for email form? - netlify forms
 - [x] Write contact section
 - [x] Write about section
 - [x] Terminal-esque about section

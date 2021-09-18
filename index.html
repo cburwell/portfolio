@@ -47,6 +47,14 @@
       document.getElementById(linkID).classList.toggle('active');
       activeLink = linkID;
     }
+
+    // Form validation
+    let contactFormValidator = new Validator("contactForm");
+    contactFormValidator.addValidation("name", "req", "Please enter your name");
+    contactFormValidator.addValidation("subject", "req", "Please enter a subject");
+    contactFormValidator.addValidation("message", "req", "Please enter a message");
+    contactFormValidator.addValidation("email", "req", "Please enter your email");
+    contactFormValidator.addValidation("email", "email", "Please enter a valid email address");
   </script>
 </head>
 
@@ -170,25 +178,27 @@
     <section id="contact">
       <h2>Contact me</h2>
       <p>I look forward to hearing from you :)</p>
-      <form class="form-floating email-form">
+      <form id="contactForm" class="form-floating email-form" method="POST">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" placeholder="Name">
+          <input id="name" type="text" class="form-control" placeholder="Name">
           <label for="floatingInput">Name</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="email" class="form-control" placeholder="name@example.com">
+          <input id="email" type="email" class="form-control" placeholder="name@example.com">
           <label for="floatingInput">Email address</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" placeholder="Subject">
+          <input id="subject" type="text" class="form-control" placeholder="Subject">
           <label for="floatingInput">Subject</label>
         </div>
         <div class="form-floating mb-3">
-          <textarea class="form-control" placeholder="Your message" style="height: 25vh"></textarea>
+          <textarea id="message" class="form-control" placeholder="Your message" style="height: 25vh"></textarea>
           <label for="floatingTextarea2">Your message</label>
         </div>
         <div class="form-floating mb-3">
-          <button type="button" class="btn btn-light btn-lg">Submit</button>
+          <button type="submit" class="btn btn-light btn-lg">Submit</button>
+          <button type="button" class="btn btn-light btn-lg" disabled style="visibility: hidden;"></button>
+          <button type="reset" class="btn btn-light btn-lg">Reset</button>
         </div>
       </form>
       <div class="socials">
@@ -199,8 +209,7 @@
             style="color: #3B5998"></i></a>
         <a href="https://www.reddit.com/user/BLUUUEink/" target="_blank"><i class="bi bi-reddit"
             style="color: #FF4500"></i></a>
-        <a href="https://twitter.com/BLUUUEinkk" target="_blank"><i class="bi bi-twitter"
-            style="color: #1DA1F2"></i></a>
+        <a href="https://twitter.com/bluuueink" target="_blank"><i class="bi bi-twitter" style="color: #1DA1F2"></i></a>
       </div>
     </section>
   </main>
