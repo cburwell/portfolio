@@ -11,8 +11,11 @@ nav {
   background-color: black !important;
 }
 
-main {
-  background-color: rgb(33, 37, 41);
+article {
+  /* scroll snap */
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+  height: 100vh;
 }
 
 section {
@@ -22,6 +25,9 @@ section {
   /* sections take up full view */
   height: 100vh;
   width: 100vw;
+
+  /* scroll snap */
+  scroll-snap-align: start;
 }
 
 body,
@@ -29,6 +35,7 @@ html {
   font-size: 100%;
   margin: 0;
   color: #33ff00;
+  background-color: rgb(33, 37, 41);
 }
 
 a {
@@ -84,7 +91,7 @@ a:hover {
 
 .term-text {
   padding-left: 0.5rem;
-  font-family: Ubuntu Mono; 
+  font-family: Ubuntu Mono;
 }
 
 .term-pic {
@@ -155,19 +162,27 @@ a:hover {
 }
 
 @-webkit-keyframes blinking {
-  50% { opacity: 0; }
-  100% { opacity: 1; }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes blinking {
-  50% { opacity: 0; }
-  100% { opacity: 1; }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #contact {
   width: 60vw;
   text-align: center;
-  
+
   display: block;
   margin-left: auto;
   margin-right: auto;
