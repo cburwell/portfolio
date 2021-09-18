@@ -22,30 +22,33 @@
   <title>Cameron Burwell</title>
 
   <script>
-    let activeLink = "";
-
     window.onload = () => {
-      // set initial active class on load
-      let splitUrl = location.href.split('#');
-      if (splitUrl.length > 1) {
-        activeLink = splitUrl.pop().toLowerCase() + "Link";
-      }
-      else {
-        activeLink = "homeLink";
-      }
-      document.getElementById(activeLink).classList.toggle('active');
-    }
-
-    // toggle active nav link class
-    function toggleActive(e) {
-      let linkID = e.text.split('#').pop().toLowerCase() + "Link";
-
-      if (activeLink) {
-        document.getElementById(activeLink).classList.toggle('active');
+      // set observer to change active links on scroll
+      // credit: https://24ways.org/2019/beautiful-scrolling-experiences-without-libraries/
+      const sections = [...document.querySelectorAll('section')]
+      const options = {
+        rootMargin: '0px',
+        threshold: 0.25
       }
 
-      document.getElementById(linkID).classList.toggle('active');
-      activeLink = linkID;
+      const callback = (entries, observer) => {
+        entries.forEach(entry => {
+          const { target } = entry;
+          let currentLink = target.id + "Link";
+
+          if (entry.intersectionRatio >= 0.25) {
+            document.getElementById(currentLink).classList.add('active');
+          } else {
+            document.getElementById(currentLink).classList.remove('active');
+          }
+        });
+      }
+
+      const observer = new IntersectionObserver(callback, options);
+
+      sections.forEach((section, index) => {
+        observer.observe(section)
+      });
     }
 
     // Form validation
@@ -70,10 +73,9 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto">
           <div class="collapse navbar-collapse" id="navbarNav">
-            <a id="homeLink" class="navbar-item nav-link" aria-current="page" href="#home"
-              onclick="toggleActive(this)">Home</a>
-            <a id="aboutLink" class="navbar-item nav-link" href="#about" onclick="toggleActive(this)">About</a>
-            <a id="contactLink" class="navbar-item nav-link" href="#contact" onclick="toggleActive(this)">Contact</a>
+            <a id="homeLink" class="navbar-item nav-link" aria-current="page" href="#home">Home</a>
+            <a id="aboutLink" class="navbar-item nav-link" href="#about">About</a>
+            <a id="contactLink" class="navbar-item nav-link" href="#contact">Contact</a>
           </div>
         </div>
       </div>
@@ -81,8 +83,8 @@
   </nav>
 
   <!-- main content -->
-  <main>
-    <article class="scroller">
+  <main id="main">
+    <article>
       <!-- home -->
       <section id="home" class="row">
         <div class="col term-emu">

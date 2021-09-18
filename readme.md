@@ -10,6 +10,6 @@
 
 ## BUGS:
 
-- [ ] Fix scroll snap active section
-- [ ] Fix home heading disappearing under navbar when opening console
+- [x] Fix scroll snap active section
+~ - [ ] Fix home heading disappearing under navbar when opening console ~
 - [x] Fix fake terminal window buttons

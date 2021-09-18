@@ -11,6 +11,10 @@ nav {
   background-color: black !important;
 }
 
+.active {
+  background-color: rgb(33, 37, 41) !important;
+}
+
 article {
   /* scroll snap */
   overflow-y: scroll;
