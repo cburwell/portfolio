@@ -41,7 +41,7 @@ a:hover {
   background-color: rgb(33, 37, 41);
 }
 
-#home {
+#about {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -97,7 +97,7 @@ a:hover {
   max-height: initial;
 }
 
-#about {
+#home {
   margin: 0;
 }
 

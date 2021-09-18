@@ -83,7 +83,47 @@
   <!-- main content -->
   <main>
     <!-- home -->
-    <section id="home">
+    <section id="home" class="row">
+      <article class="col term-emu">
+        <div class="window-header">
+          <div class="red-dot"></div>
+          <div class="yellow-dot"></div>
+          <div class="green-dot"></div>
+          <span class="center">Terminal</span>
+        </div>
+        <div>
+          <span class="term-text">cameron@burwell:~$ get info</span><br />
+          <span class="term-text">(Frontend | Backend | Cyber Security ) + Engineer</span><br />
+          <span class="term-text">Website + (Designer && Developer)</span><br />
+          <span class="term-text">Coffee lover</span><br />
+          <span class="term-text">Music maker && Guitar player</span><br />
+          <span class="term-text">Motorcycle rider</span><br />
+          <span class="term-text">cameron@burwell:~$ </span><br />
+          <span class="term-text">cameron@burwell:~$ </span><br />
+          <span class="term-text">cameron@burwell:~$ </span><br />
+          <span class="term-text">cameron@burwell:~$ get skills</span><br />
+          <span class="term-text">Javascript && HTML && CSS</span><br />
+          <span class="term-text">Angular | React | ASP.NET | Spring</span><br />
+          <span class="term-text">C# | Java</span><br />
+          <span class="term-text">cameron@burwell:~$ open cameron-burwell.jpg &</span><br />
+          <span class="term-text">cameron@burwell:~$ <span class="blink">_</span></span>
+        </div>
+      </article>
+      <article class="col term-emu">
+        <div class="window-header">
+          <span class="red-dot"></span>
+          <span class="yellow-dot"></span>
+          <span class="green-dot"></span>
+          <span class="center">cameron-burwell.jpg</span>
+        </div>
+        <div class="term-pic">
+          <img src="images/cameron-burwell.jpg" class="img-fluid" alt="Cameron Burwell">
+        </div>
+      </article>
+    </section>
+
+    <!-- about -->
+    <section id="about">
       <h2>Meeting your personal and small business website needs</h2>
       <div id="myCarouselCaptions" class="carousel slide carousel" data-bs-pause="hover" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -134,51 +174,16 @@
       </div>
     </section>
 
-    <!-- about -->
-    <section id="about" class="row">
-      <article class="col term-emu">
-        <div class="window-header">
-          <div class="red-dot"></div>
-          <div class="yellow-dot"></div>
-          <div class="green-dot"></div>
-          <span class="center">Terminal</span>
-        </div>
-        <div>
-          <span class="term-text">cameron@burwell:~$ get info</span><br />
-          <span class="term-text">(Frontend | Backend | Cyber Security ) + Engineer</span><br />
-          <span class="term-text">Website + (Designer && Developer)</span><br />
-          <span class="term-text">Coffee lover</span><br />
-          <span class="term-text">Music maker && Guitar player</span><br />
-          <span class="term-text">Motorcycle rider</span><br />
-          <span class="term-text">cameron@burwell:~$ </span><br />
-          <span class="term-text">cameron@burwell:~$ </span><br />
-          <span class="term-text">cameron@burwell:~$ </span><br />
-          <span class="term-text">cameron@burwell:~$ get skills</span><br />
-          <span class="term-text">Javascript && HTML && CSS</span><br />
-          <span class="term-text">Angular | React | ASP.NET | Spring</span><br />
-          <span class="term-text">C# | Java</span><br />
-          <span class="term-text">cameron@burwell:~$ open cameron-burwell.jpg &</span><br />
-          <span class="term-text">cameron@burwell:~$ <span class="blink">_</span></span>
-        </div>
-      </article>
-      <article class="col term-emu">
-        <div class="window-header">
-          <span class="red-dot"></span>
-          <span class="yellow-dot"></span>
-          <span class="green-dot"></span>
-          <span class="center">cameron-burwell.jpg</span>
-        </div>
-        <div class="term-pic">
-          <img src="images/cameron-burwell.jpg" class="img-fluid" alt="Cameron Burwell">
-        </div>
-      </article>
-    </section>
-
     <!-- contact -->
     <section id="contact">
       <h2>Contact me</h2>
       <p>I look forward to hearing from you :)</p>
-      <form id="contactForm" class="form-floating email-form" method="POST" data-netlify="true">
+      <form id="contactForm" class="form-floating email-form" method="POST" data-netlify="true"
+        data-netlify-recaptcha="true">
+        <!-- honeypot protection -->
+        <p hidden>
+          <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+        </p>
         <div class="form-floating mb-3">
           <input id="name" name="name" type="text" class="form-control" placeholder="Name">
           <label for="floatingInput">Name</label>
@@ -192,7 +197,8 @@
           <label for="floatingInput">Subject</label>
         </div>
         <div class="form-floating mb-3">
-          <textarea id="message" name="message" class="form-control" placeholder="Your message" style="height: 25vh"></textarea>
+          <textarea id="message" name="message" class="form-control" placeholder="Your message"
+            style="height: 25vh"></textarea>
           <label for="floatingTextarea2">Your message</label>
         </div>
         <div class="form-floating mb-3">
@@ -200,6 +206,7 @@
           <button type="button" class="btn btn-light btn-lg" disabled style="visibility: hidden;"></button>
           <button type="reset" class="btn btn-light btn-lg">Reset</button>
         </div>
+        <div data-netlify-recaptcha="true"></div>
       </form>
       <div class="socials">
         <a href="https://www.linkedin.com/in/cameron-burwell-13242a54/" target="_blank"><i class="bi bi-linkedin"
