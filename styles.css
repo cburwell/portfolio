@@ -52,7 +52,7 @@ a:hover {
   background-color: rgb(33, 37, 41);
 }
 
-#about {
+#projects {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -199,4 +199,8 @@ i {
 
 .email-form {
   color: gray;
+}
+
+.carousel-caption {
+  background-image : radial-gradient(farthest-side, rgba(0, 0, 0, 0.884) 0%, transparent 100%);
 }
